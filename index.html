@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crypto Bazar</title>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header>
+      <h1 id="logo"><a href="./index.html">Crypto Bazar</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#news">Crypto news</a></li>
+          <li><a href="#contact">Developer Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+<!-- main section -->
+    <main>
+      <!-- Crypto converter section -->
+      <section class="converter-section">
+        <h2>Crypto Currency Converter</h2>
+        <form onsubmit="getExchangeData(event.preventDefault())">
+          <div class="form-container">
+            <div class="input-container">
+              <input
+                type="text"
+                name="from-crypto-currency"
+                list="from-crypto-currency-list"
+                placeholder="From Currency e.g. BTC"
+                id="from-currency"
+                required
+              />
+              <datalist id="from-crypto-currency-list">
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="BNB">BNB</option>
+                <option value="USDT">USDT</option>
+                <option value="SOL">SOL</option>
+                <option value="ADA">ADA</option>
+                <option value="XRP">XRP</option>
+                <option value="USDC">USDC</option>
+                <option value="LUNA">LUNA</option>
+                <option value="AVAX">AVAX</option>
+              </datalist>
+
+              <input
+                type="number"
+                name="from-currency-amount"
+                id="from-currency-amount"
+                min="0"
+                required
+              />
+            </div>
+            <span class="equal"> = </span>
+            <div class="input-container">
+              <input
+                type="text"
+                name="to-crypto-currency"
+                list="to-crypto-currency-list"
+                placeholder="To Currency e.g. USD"
+                id="to-currency"
+                required
+              />
+              <datalist id="to-crypto-currency-list">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="CNY">CNY</option>
+                <option value="INR">INR</option>
+                <option value="EGP">EGP</option>
+                <option value="CHF">CHF</option>
+                <option value="GBP">GBP</option>
+                <option value="OMR">OMR</option>
+                <option value="KWD">KWD</option>
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="BNB">BNB</option>
+                <option value="USDT">USDT</option>
+                <option value="SOL">SOL</option>
+                <option value="ADA">ADA</option>
+                <option value="XRP">XRP</option>
+                <option value="USDC">USDC</option>
+                <option value="LUNA">LUNA</option>
+                <option value="AVAX">AVAX</option>
+              </datalist>
+              <input
+                type="number"
+                name="to-currency-amount"
+                id="to-currency-amount"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn">Convert</button>
+            <button type="reset" class="btn">reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Crypto Currency To Currency Converter section  -->
+      <!-- <section class="converter-section">
+        <h2>Crypto Currency To Currency Converter</h2>
+        <form onsubmit="getExchangeData(event.preventDefault())">
+          <div class="form-container">
+            <div class="input-container">
+              <input
+                type="text"
+                name="from-crypto-currency"
+                list="from-crypto-currency-list"
+                placeholder="From Currency e.g. BTC"
+                required
+              />
+
+              <input
+                type="number"
+                name="from-crypto-currency-amount-02"
+                id="from-crypto-currency-amount-02"
+                required
+              />
+            </div>
+            <span class="equal"> = </span>
+            <div class="input-container">
+              <input
+                type="text"
+                name="to-currency"
+                list="to-currency-list"
+                placeholder="To Currency e.g. USD"
+                required
+              />
+              <datalist id="to-currency-list">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="CNY">CNY</option>
+                <option value="INR">INR</option>
+                <option value="EGP">EGP</option>
+                <option value="CHF">CHF</option>
+                <option value="GBP">GBP</option>
+                <option value="OMR">OMR</option>
+                <option value="KWD">KWD</option>
+              </datalist>
+              <input
+                type="number"
+                name="to-currency-amount"
+                id="to-currency-amount"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn">Convert</button>
+        </form>
+      </section> -->
+    </main>
+
+    <!-- news section -->
+    <section id="news">
+      <h2>Crypto NEWS</h2>
+      <div id="news-feed">
+          
+      </div>
+    </section>
+
+    <!-- footer section  -->
+    <footer>
+      <div id="contact">
+        <!-- <a href=""
+              ><img
+                src="./images/icons/facebook-brands.svg"
+                alt="facebook-brands"
+                class="icon"
+            /></a> -->
+
+        <a href="https://www.instagram.com/aslam._parvej/" target="_blank"
+          ><img
+            src="./images/icons/instagram-brands.svg"
+            alt="instagram-brands"
+            class="icon"
+        /></a>
+
+        <a href="https://twitter.com/Aslamparvej10" target="_blank">
+          <img
+            src="./images/icons/twitter-brands.svg"
+            alt="twitter-brands"
+            class="icon"
+          />
+        </a>
+        <!-- <a href="" target="_blank">
+              <img
+                src="./images/icons/envelope-solid.svg"
+                alt="envelope-solid"
+                class="icon"
+              />
+            </a> -->
+        <a href="https://github.com/aslamparvej" target="_blank">
+          <img
+            src="./images/icons/github-brands.svg"
+            alt="github-brands"
+            class="icon"
+          />
+        </a>
+        <a href="https://github.com/aslamparvej" target="_blank">
+          <img
+            src="./images/icons/globe.png"
+            alt="github-brands"
+            class="icon"
+          />
+        </a>
+      </div>
+      <h3>&COPY; 2022 Crypto Bazar</h3>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
